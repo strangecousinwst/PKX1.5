@@ -1,0 +1,29 @@
+﻿<h2>Edição do registo</h2>
+@* nota: para haver submissão, tem que haver form *@
+@using (Html.BeginForm())
+{
+    @* não queremos renderizar a PK e as duas FK, mas têm que ser enviadas na submissão *@
+    @Html.Hidden("Id",(int)ViewBag.R.Id)
+    <br />
+    @Html.TextBox("ClienteId",(int)ViewBag.R.ClienteId,new { @readonly = "readonly", style="background-color:#D3D3D3" })
+    <br />
+    @Html.Hidden("TipoId",(int)ViewBag.R.TipoId)
+    
+    @* em vez das duas FK, queremos ver o nome do cliente e do tipo,
+    mas sem permissão para modificar (readonly) *@
+    @Html.TextBox("x",(string)ViewBag.R.ClienteVirtual.NomeCliente,new { @readonly = "readonly", style="background-color:#D3D3D3" })<br />
+    @Html.TextBox("y",(string)ViewBag.R.TipoVirtual.Designacao,
+        new { @readonly = "readonly", style="background-color:#D3D3D3" })<br />
+
+    @* os restantes 3 são para ver e editar; a terceira fica com largura 600 *@
+    <br><label>Edição permitida:</label><br />
+    @Html.TextBox("Item1", (string)ViewBag.R.Item1)<br />
+    @Html.TextBox("Item2", (string)ViewBag.R.Item2)<br />
+    @Html.TextBox("Texto", (string)ViewBag.R.Texto, new { style="width:600px"})<br /><br />
+    <input type="submit" value="Gravar e voltar" class="btn btn-primary"/><br /><br />
+
+    <a asp-action="Index" 
+        asp-route-IdRegresso="@ViewBag.R.ClienteId">Voltar sem gravar</a>
+}
+
+@*  *@ 

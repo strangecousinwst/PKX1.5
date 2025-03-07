@@ -1,0 +1,28 @@
+﻿<h4>Novo registo</h4>
+@using (Html.BeginForm())
+{
+    @Html.Hidden("ClienteId",(int)ViewBag.IDCLIENTESELECIONADO,new { @readonly = "readonly", style="background-color:#D3D3D3" })<br />
+    <label>Cliente que foi selecionado:</label><br />
+    @Html.TextBox("x",(string)ViewBag.NOMECLIENTE,new { @readonly = "readonly", style="background-color:#D3D3D3" })
+    <br /><br />
+    <label>Escolher o tipo de item (categoria):</label><br />
+    @Html.DropDownList("dropTipo",(SelectList)ViewBag.LISTADETIPOS)<br /><br />
+    <label>Digitar item 1 e item 2 (ex.: utilizador e senha):</label><br />
+    @Html.TextBox("Item1") @:&nbsp;    @Html.TextBox("Item2")<br /><br>
+    <label>Texto complementar:</label><br />
+    @Html.TextBox("Texto","...", @htmlAttributes: new { style="width:700px"})<br />
+    <br />
+    <br />
+    <input type="submit" class="btn btn-primary" value="Gravar e voltar" />
+    <br />
+    <br />
+    <a asp-action="Index" 
+        asp-route-IdRegresso=@ViewBag.IDCLIENTESELECIONADO>
+        Voltar sem gravar
+    </a>
+}
+
+
+
+@* GARAGEM: *@
+@* @Html.Hidden("ClienteId",(int)ViewBag.R.ClienteId)*@

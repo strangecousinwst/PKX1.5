@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\PJ\Desktop\pub</_PublishTargetUrl>
+    <History>True|2025-02-26T12:09:20.4799734Z;True|2025-02-21T07:54:25.8782606+00:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="LAGOSTIM">
+      <Value>Server=10.30.10.1,62445%3bDatabase=%3f%3buser=sa%3bpassword=123.Abc%3bTrustServerCertificate=true%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

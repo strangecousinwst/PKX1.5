@@ -1,0 +1,31 @@
+﻿@* ########################################################################################################################################################### LOGIN *@
+<li class="dropdown">
+    <!-- DROP dos CRUDs -->
+    <button type="button" class="btn btn-group-sm dropdown-toggle" data-bs-toggle="dropdown">
+        Login
+    </button>
+    <ul class="dropdown-menu">
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Login" asp-action="Index">
+                <span style="color:red"><strong>Login</strong></span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Logout" asp-action="Index">Logout</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Utilizadores" asp-action="Index">Gerir utilizadores</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="PaginaTeste" asp-action="Index">Página de teste</a>
+        </li>
+
+
+    </ul>
+</li>
+
+
+@* 
+<a class="nav-link text-dark" asp-controller="Login" asp-action="Index">
+    <p style="color:red"><strong>Login</strong></p>
+</a> *@

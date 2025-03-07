@@ -1,0 +1,36 @@
+﻿@model PKX.Models.Tipo
+
+
+<h4>Eliminar</h4>
+<h5>Atenção: esta operação é irreversível</h5>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Designacao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Designacao)
+        </dd>
+    </dl>
+
+    @if (Convert.ToInt16(ViewBag.CONTAGEM) > 0)
+    {
+        <h4>
+            Este tipo (ou categoria) não pode ser eliminado.
+            <br />
+            Ainda tem @ViewBag.CONTAGEM registos (itens) associados.
+        </h4>
+    }
+    else
+    {
+        <h4>Eliminação indisponível. <br /> Apenas o administrador pode eliminar tipos, mesmo que a contagem de itens já esteja a zero.</h4>
+    }
+    <a asp-action="Index">Voltar</a>
+    @* <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar</a>
+    </form> *@
+</div>

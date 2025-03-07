@@ -1,0 +1,27 @@
+﻿<h4>Eliminação de registo</h4>
+@* nota: para haver submissão, tem que haver form *@
+@using (Html.BeginForm())
+{
+   
+    <br /><br />
+    @Html.TextBox("1", (int)ViewBag.R.Id,new { @readonly = "readonly", style="background-color:#D3D3D3" })<br />
+    @Html.TextBox("2",(string)ViewBag.R.ClienteVirtual.NomeCliente,new { @readonly = "readonly", style="background-color:#D3D3D3" })<br />
+    @Html.TextBox("3",(string)ViewBag.R.TipoVirtual.Designacao,new { @readonly = "readonly", style="background-color:#D3D3D3" })<br />
+    @Html.TextBox("4",(string)ViewBag.R.Item1,new { @readonly = "readonly", style="background-color:#D3D3D3" })
+    <br />
+    @Html.TextBox("5",(string)ViewBag.R.Item2,new { @readonly = "readonly", style="background-color:#D3D3D3" })
+    <br />
+    @Html.TextBox("6",(string)ViewBag.R.Texto,new { @readonly = "readonly", style="background-color:#D3D3D3 width:600px" })
+    <br /><br />
+    
+    <input type="submit" 
+        asp-route-IdItem="@ViewBag.R.Id" 
+        asp-route-IdCliente="@ViewBag.R.ClienteId" 
+        value="Confirmar a eliminação"
+        class="btn btn-danger"/>
+    <br />
+    <br />
+
+    <a asp-action="Index"
+       asp-route-IdRegresso="@ViewBag.R.ClienteId">Cancelar a eliminação</a>
+}

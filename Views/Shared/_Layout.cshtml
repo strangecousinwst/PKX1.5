@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @* <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PKX</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PKX.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" /> *@
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TI400</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TI400.styles.css" asp-append-version="true" />
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> </script>
+
+    <style type="text/css">
+        .btn-circle.btn-xl {
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            padding: 13px 18px;
+            border-radius: 60px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PKX</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">           
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="GClientes" asp-action="Index">Clientes</a>
+                        </li>
+                            
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="GCliSenhas" asp-action="Index">CliSenhas</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="GProcessos" asp-action="Index">GesProcessos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="GMovimentos" asp-action="Index">GesMovimentos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="GTempos" asp-action="Index">GesTempos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="GCadastro" asp-action="Index">Cadastro</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="GAvencas" asp-action="Index">Avenças</a>
+                        </li>
+
+                    </ul>
+                        
+                 
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <a class="nav-link text-dark">@Context.Session.GetString("UTILIZADOR")</a>
+                        <li></li>
+                        <partial name="_Login.cshtml" />
+                        <partial name="_CRUDs.cshtml" />
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Sobre" asp-action="Index">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+
+            <h6 style="-webkit-transform: rotateY(180deg);-moz-transform: rotateY(180deg);
+                    -o-transform: rotateY(180deg);-ms-transform: rotateY(180deg);
+                    unicode-bidi: bidi-override;direction: rtl;margin: 0;display:inline-block;">
+                &copy;
+            </h6>
+            <h6 style="margin: 0; display:inline-block;">
+                2025 <img src="~/Icons/icon.ico" width="20" />
+
+            </h6>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

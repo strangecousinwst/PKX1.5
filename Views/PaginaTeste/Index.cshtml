@@ -1,0 +1,44 @@
+﻿<br />
+<br />
+<h2>PÁGINA DE TESTE</h2>
+<br />
+<br />
+<h4>
+    Esta página serve para verificar se há algum utilizador credenciado e se é adminisrador.
+</h4>
+<hr />
+<h4>
+    Utilizador efetou Login com sucesso?
+    @{
+    if (Context.Session.GetString("UTILIZADOR") != "" &&
+    Context.Session.GetString("UTILIZADOR") != null &&
+    Context.Session.GetString("ESTADO") == "ATIVO")
+    {
+        <p>SIM</p>
+        <p>@Context.Session.GetString("UTILIZADOR")</p>
+    }
+    else
+    {
+        <p>NÃO</p>
+    }
+    }
+</h4>
+
+<hr />
+<h4>
+    Utilizador efetou Login com sucesso e tem privilégio de administrador?
+    @{
+        if (Context.Session.GetString("UTILIZADOR") != "" &&
+        Context.Session.GetString("UTILIZADOR") != null &&
+        Context.Session.GetString("ESTADO") == "ATIVO" &&
+        Context.Session.GetString("ADMINISTRADOR") == "SIM")
+        {
+            <p>SIM</p>
+        }
+        else
+        {
+            <p>NÃO</p>
+        }
+    }
+</h4>
+

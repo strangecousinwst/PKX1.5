@@ -1,0 +1,144 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+
+/* ADIÇÃO DE ESTILOS PERSONALIZADOS */
+/*2019*/
+/* linha azul no início e no fim das páginas*/
+.mydivazul {
+    height: 4px;
+    background-color: royalblue;
+}
+
+
+/* tamanho de letra 20, vermelho, bold, para alguns títulos*/
+hred {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+
+/* tamanho de letra 20, azul, bold, para alguns títulos e/ou mensagens*/
+hazul {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkblue;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border-color: red;
+    height: 8px;
+}
+
+h8 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: darkblue;
+    margin: 0;
+    padding: 0;
+}
+hpiqueno {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 6px;
+    
+    
+    margin: 0;
+    padding: 0;
+}
+
+/*
+.navbar-custom {
+    background-color: lightgreen;
+}*/
+
+/*cor de fundo para as pre - 2022, novembro */
+
+pre {
+    background-color: aliceblue;
+}
+
+/* para as tabelas de topo de cada unidade; 2022-12-20*/
+.styled-table {
+    border-collapse: collapse;
+    margin: 1px 1px 1px 1px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+    .styled-table thead tr {
+        background-color: /*lightcyan;*/ #009879;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+        vertical-align: top;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+        border-top: 3px solid #dddddd;
+    }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+            /*border-top: 5px solid #009879;*/
+        }
+
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+
+/*2022-12-20 -para botões redondos nobr _Layout*/
+.redondo {
+    background-color: darkorange; /* Green */
+    border: none;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    text-decoration: dashed;
+    display: inline-block;
+    font-size: 12px;
+    /*margin: 1px 1px px 2px;*/
+    cursor: pointer;
+    border-radius: 50%;
+    width: 65px;
+    height: 25px;
+}

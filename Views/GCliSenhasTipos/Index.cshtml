@@ -1,0 +1,34 @@
+﻿@model IEnumerable<PKX.Models.Tipo>
+
+<h4>Listagem de tipos (ou categorias)</h4>
+
+<p>
+    <a asp-action="Create">Novo tipo</a>
+    <a asp-controller="GCliSenhas" asp-action="Index">
+        <span style="color:red"><strong>Regressar</strong></span>
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Designacao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Designacao)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                @* <a asp-action="Details" asp-route-id="@item.Id">Details</a> | *@
+                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<PKX.Models.Cliente>
+
+<h4>Listagem de clientes</h4>
+
+<p>
+    <a asp-action="Create">Novo cliente</a>
+</p>
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Procurar por nome: <input type="text" name="stringFiltro" 
+                value="@ViewBag.STRINGFILTRO" />
+            <input type="submit" value="Clicar" class="btn btn-primary" /> |
+            <a asp-action="Index" asp-route-sort="nome_asc" >Voltar à lista completa</a> | (contagem de registos: @ViewBag.CONTAGEM)
+        </p>
+    </div>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="Index" asp-route-sort=@ViewBag.SORTID>Identificador</a>
+                @* @Html.DisplayNameFor(model => model.Id) *@
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sort=@ViewBag.SORTNOME>Nome</a>
+                @* @Html.DisplayNameFor(model => model.NomeCliente) *@
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sort=@ViewBag.SORTREF>Texto</a>
+                @* @Html.DisplayNameFor(model => model.Referencia) *@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Referencia)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                @* @* <a asp-action="Details" asp-route-id="@item.Id">Details</a> | *@
+                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

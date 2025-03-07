@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CD2\**" />
+    <Compile Remove="Clientes\**" />
+    <Compile Remove="Tipoes\**" />
+    <Content Remove="CD2\**" />
+    <Content Remove="Clientes\**" />
+    <Content Remove="Tipoes\**" />
+    <EmbeddedResource Remove="CD2\**" />
+    <EmbeddedResource Remove="Clientes\**" />
+    <EmbeddedResource Remove="Tipoes\**" />
+    <None Remove="CD2\**" />
+    <None Remove="Clientes\**" />
+    <None Remove="Tipoes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Administradores\Index.cshtml" />
+    <None Include="Views\Didaticos\Drop\Index.cshtml" />
+    <None Include="Views\Didaticos\Drop\Outra.cshtml" />
+    <None Include="Views\GCliSenhas\Criar.cshtml" />
+    <None Include="Views\GCliSenhas\Editar.cshtml" />
+    <None Include="Views\GCliSenhas\Eliminar.cshtml" />
+    <None Include="Views\GCliSenhas\Index.cshtml" />
+    <None Include="Views\Login\Index.cshtml" />
+    <None Include="Views\PaginaTeste\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.11" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+  </ItemGroup>
+
+</Project>

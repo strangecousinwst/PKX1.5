@@ -1,0 +1,17 @@
+﻿
+
+
+@using (Html.BeginForm())
+{
+    @Html.DropDownList("Id",
+                    (SelectList)ViewBag.DROPEQUIPAS,"Escolher um nome",
+                    htmlAttributes: new { @onchange = "this.form.submit();"})
+
+    <a asp-controller="DROP" asp-action="Outra"
+       asp-route-Id="@ViewBag.CHAVE">Ir para a segunda View, levando a chave da drop</a>
+}
+
+
+
+
+

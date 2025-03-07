@@ -1,0 +1,152 @@
+﻿@*############################################################################################ 2*@
+@*NOTA:*@
+@*para predefinir a visualização -> mostra aberto ao iniciar a página com 'show'*@
+@*<div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">*@
+
+
+@*############################################################################################ 1*@
+<div id="accordion">
+
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <h8>Descrição do problema</h8>
+                </button>
+            </h5>
+        </div>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+
+                <pre>
+
+                    PROBLEMA – contexto e descrição geral
+                    O nosso cliente, chamemos-lhe CliX, abreviatura de ClienteX, presta serviços de assessoria, 
+                    análise e candidatura de projetos, fiscalidade e contabilidade, tarefas não especificadas 
+                    cobradas à hora, consultoria, acompanhamento de fiscalizações, outras atividades. 
+                    Tem sede em Barcelos e uma carteira de clientes que se estende pelos concelhos vizinhos, 
+                    e pontualmente, no Porto, na Corunha, em Bordéus, em Luanda e outras localidades. 
+                    Tem equipa de cerca de 25 funcionários e aproximadamente 300 clientes. 
+                    Os funcionários têm cada um o seu posto de trabalho com computador, mas por vezes 
+                    trabalham em portáteis em casa e também nas instalações dos clientes.
+                    Pretende implementar um sistema de gestão de processos que permita substituir o atual, já antigo e pouco
+                    flexível, para melhorar o controlo sobre a execução de processos associadas às atividades 
+                    com os clientes. Gerir um processo, neste contexto, quer dizer registar factos sobre esse processo; 
+                    hoje foi feito isto, ontem tinha sido feito aquilo, etc. 
+                    Cada processo tem uma data de criação, pode ter contributos de diversos funcionários; 
+                    quando for terminado, será necessário assinalar que esse processo passa para o 
+                    estado de concluído, ou que passa para o histórico, ou algo semelhante.
+                    Designadamente, pretende-se: (...)
+                    (consultar o PDF, para ler o enunciado completo)
+                <a class="btn btn-success btn-group-sm" href="~/Problema/Enunciado.pdf">Descarregar PDF</a>
+                </pre>
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <h8>Formandos e responsabilidades</h8>
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+
+                <pre>
+
+
+                    Bruno S.
+                    Diogo C.
+                    Diogo L.
+                    Guilherme V.
+                    Hugo S.
+                    João Paulo M.
+                    Leonel C.
+                    Luís T.
+                    Pablo S.
+                    Pedro P.
+                    Ricardo L.
+                    Tiago J.
+
+
+                                                              
+
+                </pre>
+            </div>
+        </div>
+    </div>
+
+</div>
+@* @*############################################################################################ 3*@
+@* <div class="card">
+    <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <h8>C</h8> 
+            </button>
+        </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+
+            <a class="btn btn-success btn-group-lg" href="~/Materiais0778/Office 365 dados login.jpg">EXTRA: COMO INSTALAR O OFFICE?</a>
+
+        </div>
+    </div>
+</div> *@
+
+@*############################################################################################ 4*@
+<div class="card">
+    <div class="card-header" id="headingFour">
+        <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <h8>Hiperligações web para programadores</h8>
+            </button>
+        </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+        <div class="card-body">
+
+            <a class="redondo" title="HTML Quick Reference Guide online" href="https://quickref.me/html">HTML</a>&nbsp;
+            <a class="redondo" title="SQL Quick Reference Guide PDF, Tutorialspoint" href="https://www.tutorialspoint.com/sql/pdf/sql-quick-guide.pdf">SQL</a>&nbsp;
+            <a class="redondo" title="CSS Quick Reference Guide PDF" href="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/d7fb67af-5180-463d-b58a-bfd4a220d5d0/css3-cheat-sheet.pdf">CSS</a>&nbsp;
+
+            <a class="redondo" title="Tabela ASCII" href="https://quickref.me/ascii-code">ASCII</a>&nbsp;
+            <a class="redondo" title="Javascript" href="https://quickref.me/javascript">Javascript</a>&nbsp;
+            <a class="redondo" title="Python" href="https://quickref.me/python">Python</a>&nbsp;
+            <a class="redondo" title="jQuery" href="https://quickref.me/jquery">jQuery.</a>&nbsp;
+
+
+        </div>
+    </div>
+</div>
+
+
+@*############################################################################################ final *@
+@* <div class="card">
+    <div class="card-header" id="headingFour">
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFinal" aria-expanded="false" aria-controls="collapseFinal">
+                <h8>?</h8>
+            </button>
+        </h5>
+    </div>
+    <div id="collapseFinal" class="collapse" aria-labelledby="headingFinal" data-parent="#accordion">
+        <div class="card-body">
+
+            <pre>
+            <h8>Projeto KX</h8>
+
+            
+        </pre>
+
+
+        </div>
+    </div>
+</div> *@
+
+
